@@ -1,0 +1,4 @@
+{
+    "command": "./gradlew dependencies",
+    "working_directory": "/home/kavia/workspace/code-generation/android-tv-recipe-guide-38151-38223/android_tv_frontend"
+}
