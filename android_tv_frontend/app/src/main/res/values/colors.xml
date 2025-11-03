@@ -1,11 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Ocean Professional Theme Colors -->
+    <color name="primary">#2563EB</color>
+    <color name="primary_dark">#1E40AF</color>
+    <color name="primary_light">#3B82F6</color>
+    
+    <color name="secondary">#F59E0B</color>
+    <color name="secondary_dark">#D97706</color>
+    <color name="secondary_light">#FBBF24</color>
+    
+    <color name="error">#EF4444</color>
+    <color name="success">#10B981</color>
+    
+    <color name="background">#f9fafb</color>
+    <color name="surface">#ffffff</color>
+    <color name="text">#111827</color>
+    <color name="text_secondary">#6B7280</color>
+    
     <!-- TV optimized colors -->
-    <color name="tv_background">#000000</color>
+    <color name="tv_background">#0F172A</color>
     <color name="tv_overlay">#CC000000</color>
-    <color name="tv_primary">#FFFFFF</color>
-    <color name="tv_secondary">#CCCCCC</color>
-    <color name="tv_accent">#2196F3</color>
-    <color name="tv_button_focused">#FFFFFF</color>
-    <color name="tv_button_normal">#80FFFFFF</color>
+    <color name="tv_card_background">#1E293B</color>
+    <color name="tv_card_focused">#2563EB</color>
+    <color name="tv_text_primary">#F9FAFB</color>
+    <color name="tv_text_secondary">#CBD5E1</color>
+    <color name="tv_accent">#F59E0B</color>
+    <color name="tv_button_focused">#F59E0B</color>
+    <color name="tv_button_normal">#2563EB</color>
+    <color name="tv_divider">#334155</color>
 </resources>

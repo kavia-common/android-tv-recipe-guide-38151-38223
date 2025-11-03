@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tv_background">
+
+    <!-- Loading State -->
+    <LinearLayout
+        android:id="@+id/loading_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:indeterminateTint="@color/primary"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Loading recipe..."
+            android:textSize="@dimen/text_size_body"
+            android:textColor="@color/tv_text_secondary"
+            android:layout_marginTop="@dimen/spacing_lg"/>
+
+    </LinearLayout>
+
+    <!-- Error State -->
+    <LinearLayout
+        android:id="@+id/error_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recipe not found"
+            android:textSize="@dimen/text_size_title"
+            android:textColor="@color/error"/>
+
+    </LinearLayout>
+
+    <!-- Content View -->
+    <ScrollView
+        android:id="@+id/content_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Hero Image -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/detail_hero_image_height">
+
+                <ImageView
+                    android:id="@+id/hero_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Recipe hero image"/>
+
+                <!-- Back Button -->
+                <Button
+                    android:id="@+id/back_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_margin="@dimen/spacing_lg"
+                    android:text="Back"
+                    android:textSize="@dimen/text_size_body"
+                    android:background="@drawable/button_background"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"/>
+
+            </FrameLayout>
+
+            <!-- Recipe Details -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/overscan_margin_horizontal">
+
+                <!-- Title and Description -->
+                <TextView
+                    android:id="@+id/recipe_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Recipe Title"
+                    android:textSize="@dimen/text_size_hero"
+                    android:textColor="@color/tv_text_primary"
+                    android:fontFamily="sans-serif-medium"
+                    android:layout_marginBottom="@dimen/spacing_md"/>
+
+                <TextView
+                    android:id="@+id/recipe_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Recipe description"
+                    android:textSize="@dimen/text_size_body"
+                    android:textColor="@color/tv_text_secondary"
+                    android:layout_marginBottom="@dimen/spacing_lg"/>
+
+                <!-- Metadata Grid -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="@dimen/spacing_lg">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="@dimen/spacing_md"
+                        android:background="@color/tv_card_background">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cuisine"
+                            android:textSize="@dimen/text_size_caption"
+                            android:textColor="@color/tv_text_secondary"/>
+
+                        <TextView
+                            android:id="@+id/cuisine_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Italian"
+                            android:textSize="@dimen/text_size_body"
+                            android:textColor="@color/secondary"
+                            android:fontFamily="sans-serif-medium"
+                            android:layout_marginTop="@dimen/spacing_xs"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="@dimen/spacing_md"
+                        android:background="@color/tv_card_background"
+                        android:layout_marginStart="@dimen/spacing_md">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Prep Time"
+                            android:textSize="@dimen/text_size_caption"
+                            android:textColor="@color/tv_text_secondary"/>
+
+                        <TextView
+                            android:id="@+id/prep_time_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="20 min"
+                            android:textSize="@dimen/text_size_body"
+                            android:textColor="@color/tv_text_primary"
+                            android:fontFamily="sans-serif-medium"
+                            android:layout_marginTop="@dimen/spacing_xs"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="@dimen/spacing_md"
+                        android:background="@color/tv_card_background"
+                        android:layout_marginStart="@dimen/spacing_md">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cook Time"
+                            android:textSize="@dimen/text_size_caption"
+                            android:textColor="@color/tv_text_secondary"/>
+
+                        <TextView
+                            android:id="@+id/cook_time_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="15 min"
+                            android:textSize="@dimen/text_size_body"
+                            android:textColor="@color/tv_text_primary"
+                            android:fontFamily="sans-serif-medium"
+                            android:layout_marginTop="@dimen/spacing_xs"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="@dimen/spacing_md"
+                        android:background="@color/tv_card_background"
+                        android:layout_marginStart="@dimen/spacing_md">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Total"
+                            android:textSize="@dimen/text_size_caption"
+                            android:textColor="@color/tv_text_secondary"/>
+
+                        <TextView
+                            android:id="@+id/total_time_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="35 min"
+                            android:textSize="@dimen/text_size_body"
+                            android:textColor="@color/tv_text_primary"
+                            android:fontFamily="sans-serif-medium"
+                            android:layout_marginTop="@dimen/spacing_xs"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="@dimen/spacing_xl">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="@dimen/spacing_md"
+                        android:background="@color/tv_card_background">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Difficulty"
+                            android:textSize="@dimen/text_size_caption"
+                            android:textColor="@color/tv_text_secondary"/>
+
+                        <TextView
+                            android:id="@+id/difficulty_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Medium"
+                            android:textSize="@dimen/text_size_body"
+                            android:textColor="@color/tv_text_primary"
+                            android:fontFamily="sans-serif-medium"
+                            android:layout_marginTop="@dimen/spacing_xs"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="@dimen/spacing_md"
+                        android:background="@color/tv_card_background"
+                        android:layout_marginStart="@dimen/spacing_md">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Servings"
+                            android:textSize="@dimen/text_size_caption"
+                            android:textColor="@color/tv_text_secondary"/>
+
+                        <TextView
+                            android:id="@+id/servings_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4"
+                            android:textSize="@dimen/text_size_body"
+                            android:textColor="@color/tv_text_primary"
+                            android:fontFamily="sans-serif-medium"
+                            android:layout_marginTop="@dimen/spacing_xs"/>
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/favorite_button"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/button_height"
+                        android:layout_weight="2"
+                        android:text="Add to Favorites"
+                        android:textSize="@dimen/text_size_body"
+                        android:background="@drawable/button_background"
+                        android:layout_marginStart="@dimen/spacing_md"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"/>
+
+                </LinearLayout>
+
+                <!-- Ingredients Section -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ingredients"
+                    android:textSize="@dimen/text_size_title"
+                    android:textColor="@color/tv_text_primary"
+                    android:fontFamily="sans-serif-medium"
+                    android:layout_marginBottom="@dimen/spacing_md"/>
+
+                <LinearLayout
+                    android:id="@+id/ingredients_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_md"
+                    android:background="@color/tv_card_background"
+                    android:layout_marginBottom="@dimen/spacing_xl"/>
+
+                <!-- Instructions Section -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Instructions"
+                    android:textSize="@dimen/text_size_title"
+                    android:textColor="@color/tv_text_primary"
+                    android:fontFamily="sans-serif-medium"
+                    android:layout_marginBottom="@dimen/spacing_md"/>
+
+                <LinearLayout
+                    android:id="@+id/instructions_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/spacing_md"
+                    android:background="@color/tv_card_background"
+                    android:layout_marginBottom="@dimen/spacing_xxl"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

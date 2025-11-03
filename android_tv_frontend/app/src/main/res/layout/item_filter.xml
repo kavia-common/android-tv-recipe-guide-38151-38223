@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/spacing_md"
+    android:background="@drawable/button_background"
+    android:layout_marginBottom="@dimen/spacing_sm"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:minHeight="@dimen/touch_target_min">
+
+    <TextView
+        android:id="@+id/filter_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Filter Name"
+        android:textSize="@dimen/text_size_body"
+        android:textColor="@color/tv_text_primary"
+        android:fontFamily="sans-serif"/>
+
+</LinearLayout>

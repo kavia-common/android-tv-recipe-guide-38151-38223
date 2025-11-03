@@ -75,6 +75,9 @@ dependencies {
     // Image loading
     implementation("com.github.bumptech.glide:glide:4.16.0")
     
+    // CardView for recipe cards
+    implementation("androidx.cardview:cardview:1.0.0")
+    
     // Testing
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")

@@ -2,8 +2,43 @@
 <resources>
     <!-- Base application theme for Android TV -->
     <style name="AppTheme" parent="Theme.Leanback">
-        <!-- Customize your theme here -->
         <item name="android:windowBackground">@color/tv_background</item>
-        <item name="android:colorPrimary">@color/tv_accent</item>
+        <item name="android:colorPrimary">@color/primary</item>
+        <item name="android:colorPrimaryDark">@color/primary_dark</item>
+        <item name="android:colorAccent">@color/secondary</item>
+        <item name="android:textColorPrimary">@color/tv_text_primary</item>
+        <item name="android:textColorSecondary">@color/tv_text_secondary</item>
+    </style>
+    
+    <!-- Card style with focus effects -->
+    <style name="RecipeCardStyle">
+        <item name="android:background">@drawable/card_background</item>
+        <item name="android:elevation">4dp</item>
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+    </style>
+    
+    <!-- Title text style -->
+    <style name="TitleText">
+        <item name="android:textSize">32sp</item>
+        <item name="android:textColor">@color/tv_text_primary</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+    
+    <!-- Body text style -->
+    <style name="BodyText">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/tv_text_secondary</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+    
+    <!-- Button style -->
+    <style name="TVButton">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/tv_text_primary</item>
+        <item name="android:background">@drawable/button_background</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
     </style>
 </resources>

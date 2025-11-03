@@ -1,13 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">android_tv_frontend</string>
+    <string name="app_name">Recipe Guide</string>
     
-    <!-- Rating Screen Strings -->
-    <string name="rating_title">Did you like it?</string>
-    <string name="rating_message">Your vote helps us recommend more content like this.</string>
-    <string name="rating_like">I like it</string>
-    <string name="rating_love">I love it</string>
-    <string name="rating_dislike">I don\'t like it</string>
-    <string name="rating_close">Close</string>
-    <string name="rating_countdown">Closing in %d seconds</string>
+    <!-- Browse Screen -->
+    <string name="browse_title">Recipe Guide</string>
+    <string name="loading_recipes">Loading recipes…</string>
+    <string name="no_recipes_found">No recipes found</string>
+    <string name="try_different_filter">Try selecting a different filter</string>
+    <string name="failed_to_load">Failed to load recipes</string>
+    <string name="try_again_later">Please try again later</string>
+    
+    <!-- Filters -->
+    <string name="filter_all">All Recipes</string>
+    <string name="filter_favorites">Favorites</string>
+    
+    <!-- Detail Screen -->
+    <string name="loading_recipe">Loading recipe…</string>
+    <string name="recipe_not_found">Recipe not found</string>
+    <string name="back">Back</string>
+    <string name="add_to_favorites">Add to Favorites</string>
+    <string name="remove_from_favorites">Remove from Favorites</string>
+    
+    <!-- Recipe Metadata -->
+    <string name="cuisine">Cuisine</string>
+    <string name="prep_time">Prep Time</string>
+    <string name="cook_time">Cook Time</string>
+    <string name="total_time">Total</string>
+    <string name="difficulty">Difficulty</string>
+    <string name="servings">Servings</string>
+    <string name="ingredients">Ingredients</string>
+    <string name="instructions">Instructions</string>
+    
+    <!-- Units -->
+    <string name="minutes_short">min</string>
+    <string name="servings_count">%d servings</string>
 </resources>

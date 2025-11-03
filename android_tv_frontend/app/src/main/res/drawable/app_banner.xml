@@ -5,20 +5,24 @@
     android:viewportWidth="320"
     android:viewportHeight="180">
     
-    <!-- Banner background -->
+    <!-- Banner background with Ocean Professional gradient -->
     <path
-        android:fillColor="#1976D2"
+        android:fillColor="#2563EB"
         android:pathData="M0,0h320v180h-320z"/>
     
-    <!-- App name text background -->
+    <!-- Accent overlay -->
     <path
-        android:fillColor="#0D47A1"
-        android:pathData="M20,60h280v60h-280z"/>
+        android:fillColor="#1E40AF"
+        android:pathData="M0,120h320v60h-320z"/>
     
-    <!-- Decorative play icon -->
+    <!-- Recipe icon (simplified chef's hat) -->
     <path
         android:fillColor="#FFFFFF"
-        android:pathData="M 50,75 L 50,105 L 80,90 Z"/>
+        android:pathData="M60,70 Q60,55 75,55 Q75,45 90,45 Q105,45 105,55 Q120,55 120,70 L120,90 L60,90 Z"/>
     
-    <!-- Banner for android_tv_frontend -->
+    <!-- Recipe icon base -->
+    <path
+        android:fillColor="#F59E0B"
+        android:pathData="M55,90h70v15h-70z"/>
+    
 </vector>

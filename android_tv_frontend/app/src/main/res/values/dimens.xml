@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- TV Overscan safe margins (8% on each side) -->
+    <dimen name="overscan_margin_horizontal">96dp</dimen>
+    <dimen name="overscan_margin_vertical">54dp</dimen>
+    
+    <!-- Card dimensions -->
+    <dimen name="recipe_card_width">280dp</dimen>
+    <dimen name="recipe_card_height">280dp</dimen>
+    <dimen name="recipe_card_corner_radius">12dp</dimen>
+    <dimen name="recipe_card_elevation">4dp</dimen>
+    <dimen name="recipe_card_spacing">16dp</dimen>
+    
+    <!-- Text sizes (TV optimized - larger for viewing distance) -->
+    <dimen name="text_size_hero">48sp</dimen>
+    <dimen name="text_size_title">32sp</dimen>
+    <dimen name="text_size_subtitle">24sp</dimen>
+    <dimen name="text_size_body">20sp</dimen>
+    <dimen name="text_size_caption">18sp</dimen>
+    
+    <!-- Spacing -->
+    <dimen name="spacing_xs">4dp</dimen>
+    <dimen name="spacing_sm">8dp</dimen>
+    <dimen name="spacing_md">16dp</dimen>
+    <dimen name="spacing_lg">24dp</dimen>
+    <dimen name="spacing_xl">32dp</dimen>
+    <dimen name="spacing_xxl">48dp</dimen>
+    
+    <!-- Touch targets (minimum 48dp for focus) -->
+    <dimen name="touch_target_min">48dp</dimen>
+    <dimen name="button_height">56dp</dimen>
+    <dimen name="button_padding_horizontal">24dp</dimen>
+    
+    <!-- Detail screen -->
+    <dimen name="detail_hero_image_height">480dp</dimen>
+    <dimen name="detail_content_max_width">800dp</dimen>
+</resources>
